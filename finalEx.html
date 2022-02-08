@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>마무리 추가 미션</h1>
+  <h2>구구단 구현</h2>
+  <!-- <script>
+    gugudan = {};
+    gugudan.result = [];
+    gugudan.current = -1;
+    gugudan.calculate = function(n){
+      this.current = n;
+      for(var i = 0; i < 9; i++){
+        this.result[i] = n * (i + 1);
+      }
+    }
+    gugudan.print = function(){
+      document.write("<h2>" + this.current + "단</h2>")
+      for(var i = 0; i < 9; i++){
+        document.write(this.current + " * " + (i + 1) + " = " +this.result[i] + "<br>");
+      }
+    }
+    function main(){
+      for (var i = 2; i <=9; i++){
+        gugudan.calculate(i);
+        gugudan.print();
+      }
+    }
+    main();
+  </script> -->
+  <h2>입력값의 단으로 구구단 구현</h2>
+  <!-- <input id="num" type="text">
+  <button onclick="gugudan()">확인</button> 
+  <script>
+    function gugudan(n){
+      var n = Number(document.getElementById("num").value);
+      if(n>1 && n<10){
+        document.write("<h3>" + n + "단</h3>")
+        for(var i = 0; i < 9; i++){
+          var ret = n * (i + 1);
+          document.write(n + " * " + (i + 1) + " = " + ret + "<br>");
+        }
+      }else{
+        alert("2와 9 사이의 정수를 입력하세요");
+      }
+    }
+  </script> -->
+  <h2>문자열 입력을 통한 곱셈 구현</h2>
+  <h4>첫번째 입력값</h4>
+  <input id="num1" type="text">
+  <h4>두번째 입력값</h4>
+  <input id="num2" type="text">
+  <button onclick="calculate()">확인</button>
+  <script>
+    function calculate(n1, n2){
+      var n1 = Number(document.getElementById("num1").value);
+      var n2 = Number(document.getElementById("num2").value);
+      for(var i = 2; i <= n1; i++){
+        for(var j = 1; j <= n2; j++){
+          var ret = i * j;
+          document.write(i + " * " + j + " = " + ret + "<br>");
+        }
+        document.write("<p>");
+      }
+    }
+  </script> 
+</body>
+</html>
