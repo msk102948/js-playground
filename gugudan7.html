@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>if 문 활용한 구구단</h1>
+  출력할 단수: <input type="text" id="num">
+  <button onclick = "runGugudan()">확인</button>
+  <script>
+    function runGugudan(){
+      var n = Number(document.getElementById("num").value);
+      document.write("<h2>구구단 "+n+"단</h2>");
+      for (var i = 1; i<10; i++){
+        if(n<2){
+          alert("2이상의 정수를 입력해주세요");
+          break;
+        }else if(n>9){
+          alert("9이하의 정수를 입력해주세요");
+          break;
+
+        }else{
+          document.write(n+" * "+ i +  " = "+(n*i)+"<br>");
+
+        }
+      }
+    }
+  </script>
+</body>
+</html>
