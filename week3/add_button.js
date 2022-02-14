@@ -8,3 +8,6 @@ btn2.onclick = readInput;
 var test = document.getElementById('test');
 test.appendChild(document.createElement('br'));
 test.appendChild(btn2);
+
+//모르겟다진지ㅏ
+//브랜치너무어렵다싀방
