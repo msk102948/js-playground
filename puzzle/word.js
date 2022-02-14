@@ -4,6 +4,7 @@
     let word2 = document.getElementById('word2'); // buttons
     let check = document.getElementById('check'); // word1 == word2
     let progress = document.getElementById('progress'); // progress check
+    let time = document.getElementById('time');
 
     //game objects
     let game = {
@@ -11,6 +12,8 @@
       'max_play' : 3,
       'current' : 0
     };
+
+    game.startTime = Date.now(); 
 
     game.words = 'apple,linux,javascript,tutorial,baby,girlfriend,legend'.split(','); 
 
@@ -107,7 +110,9 @@
         progress.innerHTML = str;
       }
       if(this.current == this.max_play){
-        alert("Good! Thank you for playing!");
+        var sec = (Date.now() - this.startTime) / 1000;
+        alert("Good! Your Record! : " + sec + "sec");
+        clearInterval(x);
       }
     };
 
@@ -142,3 +147,10 @@
       }
     };
     game.shuffle();
+
+    let updateTime = function(){
+      let now = Date.now() - game.startTime;
+      time.innerHTML = (now/1000) + "s";
+    }
+    
+    let x = setInterval(updateTime, 50);
